@@ -1,13 +1,13 @@
 /* Fonts */
 @font-face {
     font-family: 'WinThreeOne';
-    src: url('fonts/w95fa.woff2') format('woff2'),
-         url('fonts/w95fa.woff') format('woff');
+    src: url('https://ianrenton.github.io/web3point1/fonts/w95fa.woff2') format('woff2'),
+         url('https://ianrenton.github.io/web3point1/fonts/w95fa.woff') format('woff');
 }
 @font-face {
     font-family: 'DOS';
-    src: url('fonts/LessPerfectDOSVGA.woff2') format('woff2'),
-         url('fonts/LessPerfectDOSVGA.woff') format('woff');
+    src: url('https://ianrenton.github.io/web3point1/fonts/LessPerfectDOSVGA.woff2') format('woff2'),
+         url('https://ianrenton.github.io/web3point1/fonts/LessPerfectDOSVGA.woff') format('woff');
 }
 
 /* Overall */
@@ -170,9 +170,17 @@ button:active{
 .windowinner{
     margin-bottom: 5px;
 }
+.windowinner p{
+    padding-top: 0;
+    margin: 4px !important;
+    margin-top: 6px !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 1px;
+}
 
 ::-webkit-scrollbar {
-	width: 16px
+	width: 16px;
+	background-color: rgb(192, 192, 192);
 }
 
 ::-webkit-scrollbar:horizontal {
@@ -198,20 +206,124 @@ button:active{
 
 ::-webkit-scrollbar-button:vertical:start {
 	height: 17px;
-	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='16' height='17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15 0H0v16h1V1h14V0z' fill='%23DFDFDF'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2 1H1v14h1V2h12V1H2z' fill='%23fff'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 17H0v-1h15V0h1v17z' fill='%23000'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15 1h-1v14H1v1h14V1z' fill='gray'/%3E%3Cpath fill='silver' d='M2 2h12v13H2z'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8 6H7v1H6v1H5v1H4v1h7V9h-1V8H9V7H8V6z' fill='%23000'/%3E%3C/svg%3E")
+    background-size: 104%;
+	background-image: url(scroll-up.png)
 }
 
 ::-webkit-scrollbar-button:vertical:end {
 	height: 17px;
-	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='16' height='17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15 0H0v16h1V1h14V0z' fill='%23DFDFDF'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2 1H1v14h1V2h12V1H2z' fill='%23fff'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 17H0v-1h15V0h1v17z' fill='%23000'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15 1h-1v14H1v1h14V1z' fill='gray'/%3E%3Cpath fill='silver' d='M2 2h12v13H2z'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M11 6H4v1h1v1h1v1h1v1h1V9h1V8h1V7h1V6z' fill='%23000'/%3E%3C/svg%3E")
+    background-size: 104%;
+	background-image: url(scroll-down.png)
 }
 
 ::-webkit-scrollbar-button:horizontal:start {
 	width: 16px;
-	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='16' height='17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15 0H0v16h1V1h14V0z' fill='%23DFDFDF'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2 1H1v14h1V2h12V1H2z' fill='%23fff'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 17H0v-1h15V0h1v17z' fill='%23000'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15 1h-1v14H1v1h14V1z' fill='gray'/%3E%3Cpath fill='silver' d='M2 2h12v13H2z'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9 4H8v1H7v1H6v1H5v1h1v1h1v1h1v1h1V4z' fill='%23000'/%3E%3C/svg%3E")
+    background-size: 104%;
+	background-image: url(scroll-left.png)
 }
 
 ::-webkit-scrollbar-button:horizontal:end {
 	width: 16px;
-	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='16' height='17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15 0H0v16h1V1h14V0z' fill='%23DFDFDF'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2 1H1v14h1V2h12V1H2z' fill='%23fff'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 17H0v-1h15V0h1v17z' fill='%23000'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15 1h-1v14H1v1h14V1z' fill='gray'/%3E%3Cpath fill='silver' d='M2 2h12v13H2z'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7 4H6v7h1v-1h1V9h1V8h1V7H9V6H8V5H7V4z' fill='%23000'/%3E%3C/svg%3E")
+    background-size: 104%;
+	background-image: url(scroll-right.png)
+}
+
+.field-row-stacked *+* {
+	margin-top: 6px
+}
+
+input[type=checkbox],input[type=radio] {
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background: 0;
+	border: none;
+	margin: 0;
+	opacity: 0;
+	position: fixed
+}
+
+input[type=checkbox]+label,input[type=radio]+label {
+	line-height: 13px
+}
+
+
+input[type=checkbox]:focus+label,input[type=radio]:focus+label {
+	outline: 1px dotted #000
+}
+
+input[type=checkbox]+label {
+	margin-left: 19px;
+	position: relative
+}
+
+input[type=checkbox]+label:before {
+	background: #fff;
+	box-shadow: inset -1px -1px black,inset 1px 1px black;
+	content: "";
+	display: inline-block;
+	height: 13px;
+	left: -19px;
+	margin-right: 6px;
+	position: absolute;
+	width: 13px
+}
+
+input[type=checkbox]:active+label:before {
+	background: white
+}
+
+input[type=checkbox]:checked+label:after {
+	background: url('checked.png');
+	content: "";
+	display: block;
+	height: 11px;
+	left: -16px;
+	position: absolute;
+	top: 1px;
+    left:-18px;
+	width: 11px
+}
+
+input[type=checkbox][disabled]+label:before {
+	background: silver
+}
+
+input[type=checkbox][disabled]:checked+label:after {
+	background: url('checked.png')
+}
+input[type=email],input[type=number],input[type=password],input[type=text] {
+    font-family: 'DOS';
+    src: url('https://ianrenton.github.io/web3point1/fonts/LessPerfectDOSVGA.woff2') format('woff2'),
+         url('https://ianrenton.github.io/web3point1/fonts/LessPerfectDOSVGA.woff') format('woff');
+    -webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border: none;
+	border-radius: 0;
+}
+
+input[type=email],input[type=number],input[type=password],input[type=text],select {
+	background-color: #fff;
+    border: #000 1px solid;
+	padding: 3px 4px;
+    font-family: 'DOS';
+    src: url('https://ianrenton.github.io/web3point1/fonts/LessPerfectDOSVGA.woff2') format('woff2'),
+         url('https://ianrenton.github.io/web3point1/fonts/LessPerfectDOSVGA.woff') format('woff');
+}
+input[type=email]:focus,input[type=number]:focus,input[type=password]:focus,input[type=text]:focus,select:focus,textarea:focus {
+	outline: none
+}
+select {
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background-image: url(dropdown.png);
+	background-position: top -1px right -1px;
+	background-repeat: no-repeat;
+    background-size: 17px;
+    height: 20px;
+	border-radius: 0;
+	padding-right: 32px;
+	position: relative
 }

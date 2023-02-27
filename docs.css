@@ -1,12 +1,11 @@
 body {
   margin: 0;
   padding: 0;
-  background: #c0c0c0;
+  background: white;
 }
 
 main {
   width: 65rem;
-  margin-left: 240px;
   margin-bottom: 60px;
 }
 
@@ -79,7 +78,7 @@ p {
 blockquote {
   margin: 0 0 20px;
   padding: 20px;
-  background: #dfdfdf;
+  background: #e7e7e7;
 }
 
 blockquote footer {
@@ -89,7 +88,7 @@ blockquote footer {
 .example {
   margin: 16px 0;
   padding: 12px 24px;
-  border-left: 1px solid #808080;
+  border-left: 1px solid #bdbdbd;
 }
 
 details {

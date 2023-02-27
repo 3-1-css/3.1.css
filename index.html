@@ -21,31 +21,6 @@
 </head>
 <body ontouchstart>
     <aside>
-      <ul class="tree-view">
-        <li><a href="#intro">Intro</a></li>
-        <li>
-          <a href="#components">Components</a>
-          <ul>
-            <li><a href="#button">Button</a></li>
-            <li><a href="#checkbox">Checkbox</a></li>
-            <li><a href="#option-button">OptionButton</a></li>
-            <li><a href="#group-box">GroupBox</a></li>
-            <li><a href="#text-box">TextBox</a></li>
-            <li><a href="#slider">Slider</a></li>
-            <li><a href="#dropdown">Dropdown</a></li>
-            <li>
-              <a href="#window">Window</a>
-              <ul>
-                <li><a href="#title-bar">Title Bar</a></li>
-                <li><a href="#window-contents">Window contents</a></li>
-                <li><a href="#status-bar">Status Bar</a></li>
-              </ul>
-            </li>
-            <li><a href="#tree-view">TreeView</a></li>
-          </ul>
-        </li>
-        <li><a href="#issues-contributing-etc">Issues, Contributing, etc.</a></li>
-      </ul>
     </aside>
   <main>
     <h1>3.1.css</h1>
@@ -739,20 +714,22 @@
         </p>
 
         <div class="example">
-      <div class="title-bar">
-  <div class="title-bar-text">A Title Bar</div>
-  <div class="title-bar-controls">
-    <button aria-label="Close"></button>
-  </div>
+          
+    <div class="window">
+      <div class="windowheader">
+        <div class="windowclose"></div>
+        <div class="windowtitle">A Title Bar</div>
+      </div>
 </div>
       <details>
         <summary>Show code</summary>
-        <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title-bar&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title-bar-text&quot;</span>&gt;</span>A Title Bar<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title-bar-controls&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Close&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+        <pre><code><div>
+          <div>&nbsp;</div>
+          <div>&nbsp; &nbsp; &nbsp; <span>&lt;</span><span>div</span> <span>class</span>=<span>"windowheader"</span><span>&gt;</span></div>
+          <div>&nbsp; &nbsp; &nbsp; &nbsp; <span>&lt;</span><span>div</span> <span>class</span>=<span>"windowclose"</span><span>&gt;&lt;/</span><span>div</span><span>&gt;</span></div>
+          <div>&nbsp; &nbsp; &nbsp; &nbsp; <span>&lt;</span><span>div</span> <span>class</span>=<span>"windowtitle"</span><span>&gt;</span>A Title Bar<span>&lt;/</span><span>div</span><span>&gt;</span></div>
+          <div>&nbsp; &nbsp; &nbsp; <span>&lt;/</span><span>div</span><span>&gt;</span></div>
+          </div></code></pre>
       </details>
     </div>
 
@@ -763,90 +740,40 @@
         </p>
 
         <div class="example">
-      <div class="title-bar">
-  <div class="title-bar-text">A Title Bar</div>
-  <div class="title-bar-controls">
-    <button aria-label="Minimize"></button>
-    <button aria-label="Maximize"></button>
-    <button aria-label="Close"></button>
-  </div>
-</div>
-
-<br />
-
-<div class="title-bar">
-  <div class="title-bar-text">A Maximized Title Bar</div>
-  <div class="title-bar-controls">
-    <button aria-label="Minimize"></button>
-    <button aria-label="Restore"></button>
-    <button aria-label="Close"></button>
-  </div>
-</div>
-
-<br />
-
-<div class="title-bar">
-  <div class="title-bar-text">A Helpful Bar</div>
-  <div class="title-bar-controls">
-    <button aria-label="Help"></button>
-    <button aria-label="Close"></button>
-  </div>
-</div>
+          
+          <div class="window">
+            <div class="windowheader">
+              <div class="windowclose"></div>
+              <div class="windowtitle">A Title Bar With options</div>
+              <div class="windowmenubar" style="height:10px !important;font-size: smaller;">
+                <div class="menuitem" style="position:relative;top:-3px !important;"><b><u>O</u>ptions <u>W</u>indow</b></div>
+              </div>
+            </div>
+              <div class="windowinner" style="top:5.75px;position: relative;">
+                <br> <!--Won't work correctlly without <br>-->
+              </div>
+          </div>
       <details>
         <summary>Show code</summary>
-        <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title-bar&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title-bar-text&quot;</span>&gt;</span>A Title Bar<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title-bar-controls&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Minimize&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Maximize&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Close&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title-bar&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title-bar-text&quot;</span>&gt;</span>A Maximized Title Bar<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title-bar-controls&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Minimize&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Restore&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Close&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title-bar&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title-bar-text&quot;</span>&gt;</span>A Helpful Bar<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title-bar-controls&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Help&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Close&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+        <pre><code><div>
+          <div><span>&lt;</span><span>div</span> <span>class</span>=<span>"window"</span><span>&gt;</span></div>
+          <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span>&lt;</span><span>div</span> <span>class</span>=<span>"windowheader"</span><span>&gt;</span></div>
+          <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span>&lt;</span><span>div</span> <span>class</span>=<span>"windowclose"</span><span>&gt;&lt;/</span><span>div</span><span>&gt;</span></div>
+          <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span>&lt;</span><span>div</span> <span>class</span>=<span>"windowtitle"</span><span>&gt;</span>A Title Bar With options<span>&lt;/</span><span>div</span><span>&gt;</span></div>
+          <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span>&lt;</span><span>div</span> <span>class</span>=<span>"windowmenubar"</span> <span>style</span>=<span>"</span><span>height:10px !important;font-size: smaller;"</span><span>&gt;</span></div>
+          <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span>&lt;</span><span>div</span> <span>class</span>=<span>"menuitem"</span> <span>style</span>=<span>"</span><span>position:relative;top:-3px !important;"</span><span>&gt;&lt;</span><span>b</span><span>&gt;&lt;</span><span>u</span><span>&gt;</span>O<span>&lt;/</span><span>u</span><span>&gt;</span>ptions <span>&lt;</span><span>u</span><span>&gt;</span>W<span>&lt;/</span><span>u</span><span>&gt;</span>indow<span>&lt;/</span><span>b</span><span>&gt;&lt;/</span><span>div</span><span>&gt;</span></div>
+          <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span>&lt;/</span><span>div</span><span>&gt;</span></div>
+          <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span>&lt;/</span><span>div</span><span>&gt;</span></div>
+          <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span>&lt;</span><span>div</span> <span>class</span>=<span>"windowinner"</span> <span>style</span>=<span>"</span><span>top:5.75px;position: relative;"</span><span>&gt;</span></div>
+          <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span>&lt;</span><span>br</span><span>&gt;</span> <span>&lt;!--Won't work correctlly without &lt;br&gt;--&gt;</span></div>
+          <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span>&lt;/</span><span>div</span><span>&gt;</span></div>
+          </div>
+        </code></pre>
       </details>
     </div>
-		<p>
-          You can make a title bar "inactive" by adding <code>inactive</code> class,
-		  useful when making more than one window.
-        </p>
-		 <div class="example">
-      <div class="title-bar inactive">
-  <div class="title-bar-text">An inactive title bar</div>
-  <div class="title-bar-controls">
-    <button aria-label="Close"></button>
   </div>
 </div>
-      <details>
-        <summary>Show code</summary>
-        <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title-bar inactive&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title-bar-text&quot;</span>&gt;</span>An inactive title bar<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title-bar-controls&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Close&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
-      </details>
-    </div>
-      </div>
+</section>
     </section>
 
     <section class="component">
@@ -867,31 +794,6 @@
           container style.
         </p>
 
-        <div class="example">
-      <div class="window" style="width: 300px">
-  <div class="title-bar">
-    <div class="title-bar-text">A Complete Window</div>
-    <div class="title-bar-controls">
-      <button aria-label="Minimize"></button>
-      <button aria-label="Maximize"></button>
-      <button aria-label="Close"></button>
-    </div>
-  </div>
-</div>
-      <details>
-        <summary>Show code</summary>
-        <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;window&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width: 300px&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title-bar&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title-bar-text&quot;</span>&gt;</span>A Complete Window<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title-bar-controls&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Minimize&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Maximize&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Close&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
-      </details>
-    </div>
 
         <p>
           To draw the contents of the window, we use the <code>window-body</code>
@@ -899,19 +801,18 @@
         </p>
 
         <div class="example">
-      <div class="window" style="width: 300px">
-  <div class="title-bar">
-    <div class="title-bar-text">A Window With Stuff In It</div>
-    <div class="title-bar-controls">
-      <button aria-label="Minimize"></button>
-      <button aria-label="Maximize"></button>
-      <button aria-label="Close"></button>
-    </div>
-  </div>
-  <div class="window-body">
-    <p>There's so much room for activities!</p>
-  </div>
-</div>
+          <div class="window">
+            <div class="windowheader">
+              <div class="windowclose"></div>
+              <div class="windowtitle">A Window With Stuff In It</div>
+            </div>
+              <div class="windowinner" >
+                <!--Won't work correctlly without <br>-->
+                <p>There's so much room for activities!</p>
+              </div>
+          </div>
+
+
       <details>
         <summary>Show code</summary>
         <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;window&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width: 300px&quot;</span>&gt;</span>
@@ -931,7 +832,7 @@
     </div>
       </div>
     </section>
-
+<!-- 
     <section class="component">
       <h4 id="status-bar">Status Bar</h4>
       <div>
@@ -993,9 +894,9 @@
     </div>
 
 
-    </section>
+    </section> -->
 
-    <section class="component">
+    <!-- <section class="component">
       <h3 id="tree-view">TreeView</h3>
       <div>
         <blockquote>
@@ -1132,7 +1033,7 @@
       </details>
     </div>
       </div>
-    </section>
+    </section> -->
 
     <h2 id="issues-contributing-etc">Issues, Contributing, etc.</h2>
 
