@@ -19,6 +19,8 @@ html, body {
     font-size: 12px;
     font-smooth: never;
     -webkit-font-smoothing : none;
+    --font:'WinThreeOne';
+
 }
 
 /* Windows */
@@ -305,9 +307,7 @@ input[type=checkbox][disabled]:checked+label:after {
 	background: url('checked.png')
 }
 input[type=email],input[type=number],input[type=password],input[type=text] {
-    font-family: 'DOS';
-    src: url('https://ianrenton.github.io/web3point1/fonts/LessPerfectDOSVGA.woff2') format('woff2'),
-         url('https://ianrenton.github.io/web3point1/fonts/LessPerfectDOSVGA.woff') format('woff');
+    font-family: var(--font) !important;
     -webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
@@ -315,13 +315,16 @@ input[type=email],input[type=number],input[type=password],input[type=text] {
 	border-radius: 0;
 }
 
+textarea {
+    font-family: var(--font) !important;
+}
+
 input[type=email],input[type=number],input[type=password],input[type=text],select {
 	background-color: #fff;
     border: #000 1px solid;
 	padding: 3px 4px;
-    font-family: 'DOS';
-    src: url('https://ianrenton.github.io/web3point1/fonts/LessPerfectDOSVGA.woff2') format('woff2'),
-         url('https://ianrenton.github.io/web3point1/fonts/LessPerfectDOSVGA.woff') format('woff');
+    margin-bottom: 6px;
+    margin-top: 1px;
 }
 input[type=email]:focus,input[type=number]:focus,input[type=password]:focus,input[type=text]:focus,select:focus,textarea:focus {
 	outline: none
