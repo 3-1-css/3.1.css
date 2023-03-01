@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: white;
+  background: teal;
 }
 
 main {
@@ -33,18 +33,18 @@ hr {
   margin: 0;
   border: none;
   width: 400px;
-  height: 1px;
-  opacity: 0.5;
+  height: 3.75px;
   background: linear-gradient(
     to right,
-    red 20%,
-    yellow 20%,
-    yellow 36%,
-    green 36%,
-    green 60%,
-    blue 60%,
-    blue 100%
+    hsl(0, 75%, 50%) 20%,
+    hsl(60, 75%, 50%) 20%,
+    hsl(60, 75%, 50%) 36%,
+    hsl(120, 75%, 25%) 36%,
+    hsl(120, 75%, 25%) 60%,
+    hsl(240, 75%, 50%) 60%,
+    hsl(240, 75%, 50%) 100%
   );
+  border-radius: 0 6px 6px 0;
 }
 
 h2 {
@@ -78,7 +78,7 @@ p {
 blockquote {
   margin: 0 0 20px;
   padding: 20px;
-  background: #e7e7e7;
+  background: rgba(0, 0, 0, 0.192);
 }
 
 blockquote footer {
@@ -88,7 +88,7 @@ blockquote footer {
 .example {
   margin: 16px 0;
   padding: 12px 24px;
-  border-left: 1px solid #bdbdbd;
+  border-left: 1px solid rgba(0, 0, 0, 0.26);
 }
 
 details {
@@ -109,11 +109,11 @@ button.focused {
   outline: 1px dotted #000000;
   outline-offset: -4px;
 }
-
+/* 
 button.active {
   box-shadow: inset -1px -1px #ffffff, inset 1px 1px #0a0a0a,
     inset -2px -2px #dfdfdf, inset 2px 2px #808080;
-}
+} */
 
 @media (max-width: 480px) {
   aside {
@@ -148,4 +148,10 @@ button.active {
   pre {
     overflow-x: scroll;
   }
+}
+main{
+  background: rgb(255,255,255);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 76%, rgba(255,255,255,0.7847514005602241) 89%, rgba(255,255,255,0.6166841736694677) 96%, rgba(255,255,255,0.20772058823529416) 98%, rgba(255,255,255,0.0844712885154062) 99%, rgba(255,255,255,0) 100%);
+  width: calc(65rem);
+  padding-right: calc(98.3vw - 65rem) !important;
 }
