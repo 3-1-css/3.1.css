@@ -145,28 +145,39 @@ textarea.fullwindowdosprompt {
 
 /* New code (WlodekM's) */
 
-button{
+button,input[type=reset],input[type=submit]{
     --button-bg:rgb(198, 198, 198);
     --button-light:rgb(235, 235, 235);
     --button-dark:rgb(148, 148, 148);
     --button-border-width:2px;
+    --button-thin-width:calc(var(--button-border-width) - 1px);
     font-family: 'WinThreeOne', sans-serif;
     background-color: rgb(198, 198, 198);
-    border-top: var(--button-light) solid var(--button-border-width);
-    border-left: var(--button-light) solid var(--button-border-width);
+    border-top: var(--button-light) solid var(--button-thin-width);
+    border-left: var(--button-light) solid var(--button-thin-width);
     border-bottom: var(--button-dark) solid var(--button-border-width);
     border-right: var(--button-dark) solid var(--button-border-width);
     border-radius: 1px;
     box-shadow: 0 0 0 1px black;
 }
-button:active{
-    border-top: var(--button-dark) solid var(--button-border-width);
-    border-left: var(--button-dark) solid var(--button-border-width);
+button:active,input[type=reset]:active,input[type=submit]:active{
+    border-top: var(--button-dark) solid var(--button-thin-width);
+    border-left: var(--button-dark) solid var(--button-thin-width);
     border-bottom: var(--button-light) solid var(--button-border-width);
     border-right: var(--button-light) solid var(--button-border-width);
     padding-left: 5.5px;
     padding-right: 6.5px;
 }
+button .active,input[type=reset] .active,input[type=submit] .active{
+    border-top: var(--button-dark) solid var(--button-thin-width);
+    border-left: var(--button-dark) solid var(--button-thin-width);
+    border-bottom: var(--button-light) solid var(--button-border-width);
+    border-right: var(--button-light) solid var(--button-border-width);
+    padding-left: 5.5px;
+    padding-right: 6.5px;
+    border-radius: 1px;
+    box-shadow: 0 0 0 1px black;
+} 
 .windowinner{
     margin-bottom: 5px;
 }
@@ -244,7 +255,8 @@ input[type=checkbox],input[type=radio] {
 }
 
 input[type=checkbox]+label,input[type=radio]+label {
-	line-height: 13px
+	line-height: 15px
+
 }
 
 
@@ -280,7 +292,7 @@ input[type=checkbox]:checked+label:after {
 	height: 11px;
 	left: -16px;
 	position: absolute;
-	top: 1px;
+	top: -1px;
     left:-18px;
 	width: 11px
 }
