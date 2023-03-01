@@ -153,5 +153,5 @@ main{
   background: rgb(255,255,255);
   background: linear-gradient(0deg, rgba(255,255,255,1) 76%, rgba(255,255,255,0.7847514005602241) 89%, rgba(255,255,255,0.6166841736694677) 96%, rgba(255,255,255,0.20772058823529416) 98%, rgba(255,255,255,0.0844712885154062) 99%, rgba(255,255,255,0) 100%);
   width: calc(65rem);
-  padding-right: calc(98.3vw - 65rem) !important;
+  padding-right: calc(99.9vw - 65rem) !important;
 }
